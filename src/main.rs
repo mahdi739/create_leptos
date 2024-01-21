@@ -6,7 +6,7 @@ async fn main() -> std::io::Result<()> {
   use leptos_actix::LeptosRoutes;
   use leptos_hydrate_test_1::app::App;
 
-  let conf = leptos::get_configurat`ion(None).await.unwrap();
+  let conf = leptos::get_configuration(None).await.unwrap();
   let addr = conf.leptos_options.site_addr;
   let routes = leptos_actix::generate_route_list(App);
   actix_web::HttpServer::new(move || {
